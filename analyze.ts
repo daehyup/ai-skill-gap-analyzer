@@ -13,8 +13,8 @@ import axios from 'axios';
 
 // API 키 (mcp.json에서 가져옴)
 // 🚨 실제 배포 시 이 키들은 Vercel/Netlify의 '환경 변수'로 옮겨야 합니다.
-const FIRECRAWL_API_KEY = 'fc-c8dbf380bd4547269941996358858d68';
-const TAVILY_API_KEY = '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';
+const FIRECRAWL_API_KEY = process.env.FIRECRAWL_API_KEY;
+const TAVILY_API_KEY = process.env.TAVILY_API_KEY;
 
 // API 엔드포인트
 const FIRECRAWL_API_URL = 'https://api.firecrawl.dev/v0/scrape';

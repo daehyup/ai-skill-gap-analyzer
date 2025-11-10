@@ -1,0 +1,206 @@
+/*
+ * src/index.css
+ * "My Skill-Gap Analyzer" 글로벌 스타일시트
+ * [NEW]: 'summary' 및 'projects' 섹션 스타일 추가
+ */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App-header {
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.App-header h1 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 2.5rem;
+}
+
+.App-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.App-main {
+  width: 100%;
+}
+
+.input-section {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.input-group input[type='text'],
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box; /* 중요 */
+}
+
+.input-group textarea {
+  font-family: inherit;
+  resize: vertical;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #007aff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #005ecb;
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.error-panel {
+  background: #fff0f0;
+  border: 1px solid #ffcccc;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 30px;
+  color: #d8000c;
+}
+
+.result-section {
+  margin-top: 40px;
+}
+
+.result-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.result-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.result-card {
+  flex-basis: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  box-sizing: border-box;
+  margin-bottom: 20px; /* 카드 간 간격 추가 */
+}
+
+@media (min-width: 768px) {
+  .result-card.common,
+  .result-card.gap {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+.result-card h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.result-card.common h3 {
+  color: #27ae60;
+}
+.result-card.gap h3 {
+  color: #e74c3c;
+}
+
+/* ✅ [추가됨]: 총평(summary) 및 추천 프로젝트(projects) 스타일 */
+.result-card.summary {
+  background-color: #fdfae6; /* 부드러운 노란색 배경 */
+  border-left: 5px solid #f0ad4e;
+}
+.result-card.summary h3 {
+  color: #c77400;
+}
+.result-card.summary p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.result-card.projects h3 {
+  color: #007aff;
+}
+.project-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+.project-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.project-item h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.15rem;
+  color: #333;
+}
+.project-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.result-card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.result-card li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
